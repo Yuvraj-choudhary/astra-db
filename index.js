@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 const app = express().use(bodyParser.json());
 
-app.post("/", async (req, res) => {
+app.get("/", async (req, res) => {
   const { sql } = req.body;
 
   const client = new Client({
