@@ -27,7 +27,7 @@ app.get("/", async (req, res) => {
   await client.shutdown();
 });
 
-app.listen(3000, () => console.log("running"));
+app.listen(process.env.PORT, () => console.log("running"));
 
 // async function run() {
 //   const client = new Client({
