@@ -21,7 +21,7 @@ app.get("/", async (req, res) => {
   await client.connect();
 
   // Execute a query
-  const rs = await client.execute(sql ? sql : "SELECT * FROM privator.users;");
+  const rs = await client.execute(sql ? sql : "SELECT * FROM pr.users;");
   res.send(rs.rows);
 
   await client.shutdown();
